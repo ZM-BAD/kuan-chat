@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Doubao Chat Full Width
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.0
 // @description  移除豆包对话页面多余留白，让内容区域填满页面宽度
-// @author       You
+// @author       ZM-BAD
 // @match        https://www.doubao.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=doubao.com
+// @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js
+// @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==

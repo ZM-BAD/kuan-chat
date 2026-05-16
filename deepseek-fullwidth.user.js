@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         DeepSeek Chat Full Width
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      5.0
 // @description  移除 DeepSeek 对话页面多余留白，让内容和输入框更宽但保留适当边距
-// @author       You
+// @author       ZM-BAD
 // @match        https://chat.deepseek.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=deepseek.com
+// @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js
+// @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==

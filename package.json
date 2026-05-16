@@ -1,0 +1,37 @@
+{
+  "name": "kuan-chat",
+  "version": "1.0.0",
+  "description": "强制AI对话界面全宽显示 / Force AI chats into full-width mode",
+  "private": true,
+  "scripts": {
+    "lint": "eslint '*.user.js'",
+    "format": "prettier --write '*.user.js'",
+    "format:check": "prettier --check '*.user.js'",
+    "check:metadata": "node scripts/check-metadata.mjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZM-BAD/kuan-chat.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZM-BAD/kuan-chat/issues"
+  },
+  "homepage": "https://github.com/ZM-BAD/kuan-chat#readme",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-userscripts": "^0.5.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.4",
+    "prettier": "^3.8.3"
+  }
+}

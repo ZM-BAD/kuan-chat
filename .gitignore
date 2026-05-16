@@ -14,5 +14,8 @@ Thumbs.db
 # Playwright MCP
 .playwright-mcp/
 
+# Dependencies
+node_modules/
+
 # Serena
 .serena/

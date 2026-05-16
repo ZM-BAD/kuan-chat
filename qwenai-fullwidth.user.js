@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Qwen AI Chat Full Width
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.0
 // @description  移除 Qwen AI 国际版对话页面多余留白，让内容区域填满页面宽度
-// @author       You
+// @author       ZM-BAD
 // @match        https://chat.qwen.ai/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=qwen.ai
+// @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js
+// @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==

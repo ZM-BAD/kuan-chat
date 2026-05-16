@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Qianwen Chat Full Width
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.0
 // @description  移除千问对话页面多余留白，让内容区域填满页面宽度
-// @author       You
+// @author       ZM-BAD
 // @match        https://www.qianwen.com/*
 // @icon         https://img.alicdn.com/imgextra/i4/O1CN01uar8u91DHWktnF2fl_!!6000000000191-2-tps-110-110.png
+// @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js
+// @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
@@ -54,13 +56,15 @@
       center.style.setProperty('box-sizing', 'border-box', 'important');
     }
 
-    document.querySelectorAll('[class*="inputMotionCarrier"]').forEach(function (el) {
-      el.style.setProperty('max-width', '100%', 'important');
-      el.style.setProperty('width', '100%', 'important');
-      el.style.setProperty('padding-left', PADDING, 'important');
-      el.style.setProperty('padding-right', PADDING, 'important');
-      el.style.setProperty('box-sizing', 'border-box', 'important');
-    });
+    document
+      .querySelectorAll('[class*="inputMotionCarrier"]')
+      .forEach(function (el) {
+        el.style.setProperty('max-width', '100%', 'important');
+        el.style.setProperty('width', '100%', 'important');
+        el.style.setProperty('padding-left', PADDING, 'important');
+        el.style.setProperty('padding-right', PADDING, 'important');
+        el.style.setProperty('box-sizing', 'border-box', 'important');
+      });
 
     document.querySelectorAll('[class*="inputOutWrap"]').forEach(function (el) {
       el.style.setProperty('max-width', '100%', 'important');
