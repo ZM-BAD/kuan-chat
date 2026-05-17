@@ -2,7 +2,7 @@
 // @name         Qianwen Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.0
-// @description  移除千问对话页面多余留白，让内容区域填满页面宽度
+// @description  Remove excess whitespace from Qianwen chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://www.qianwen.com/*
 // @icon         https://img.alicdn.com/imgextra/i4/O1CN01uar8u91DHWktnF2fl_!!6000000000191-2-tps-110-110.png

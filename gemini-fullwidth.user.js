@@ -2,7 +2,7 @@
 // @name         Gemini Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.1
-// @description  移除 Gemini 对话页面多余留白，让内容区域填满页面宽度
+// @description  Remove excess whitespace from Gemini chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://gemini.google.com/*
 // @icon         https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg

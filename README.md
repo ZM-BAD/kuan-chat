@@ -1,52 +1,43 @@
-# kuan-chat
+# kuan-chat 🖥️
 
-强制 AI 对话界面全宽显示 / Force AI chats into full-width mode. Reclaim your screen space.
+[中文说明](./README_zh.md)
 
-## 为什么
+Force AI chat interfaces into full-width mode. Reclaim your screen space.
 
-AI 对话属于高密度信息区域，默认的左右留白会浪费大量屏幕空间。这些 Tampermonkey 脚本通过覆盖 CSS `max-width` 限制，让内容区撑满浏览器。
+AI conversations are high-density information areas. The default left/right whitespace wastes a significant amount of screen real estate. These Tampermonkey scripts override CSS `max-width` constraints to make the content fill the entire browser width.
 
-## 支持平台
+## Supported Platforms & Installation
 
-| 平台 | 脚本 | 域名 |
-|------|------|------|
-| ChatGPT | `chatgpt-fullwidth.user.js` | `chatgpt.com` |
-| DeepSeek | `deepseek-fullwidth.user.js` | `chat.deepseek.com` |
-| Kimi | `kimi-fullwidth.user.js` | `kimi.com` |
-| 千问（国内版） | `qianwen-fullwidth.user.js` | `qianwen.com` |
-| Qwen AI（国际版） | `qwenai-fullwidth.user.js` | `chat.qwen.ai` |
-| 豆包 | `doubao-fullwidth.user.js` | `doubao.com` |
-| Gemini | `gemini-fullwidth.user.js` | `gemini.google.com` |
+1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension
+2. Click the install link for the platform you need:
 
-## 效果对比
+| Platform | Script | Install | Demo |
+| :---: | :---: | :---: | :---: |
+| ChatGPT | `chatgpt-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js) | ![ChatGPT](demos/chatgpt.mov) |
+| DeepSeek | `deepseek-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js) | ![DeepSeek](demos/deepseek.mov) |
+| Kimi | `kimi-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js) | ![Kimi](demos/kimi.mov) |
+| Qianwen (CN) | `qianwen-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js) | ![Qianwen](demos/qianwen.mov) |
+| Qwen AI (Global) | `qwenai-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js) | ![Qwen AI](demos/qwen.mov) |
+| Doubao | `doubao-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js) | ![Doubao](demos/doubao.mov) |
+| Gemini | `gemini-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/gemini-fullwidth.user.js) | ![Gemini](demos/gemini.mov) |
 
-<!-- TODO: 添加各平台的效果对比截图 -->
+Or manually: copy the script content into a new Tampermonkey script.
 
-**Before:**
-<!-- screenshot placeholder -->
-
-**After:**
-<!-- screenshot placeholder -->
-
-## 安装
-
-1. 安装 [Tampermonkey](https://www.tampermonkey.net/) 浏览器扩展
-2. 点击下方对应平台的安装链接（自动跳转 Tampermonkey 安装页面）：
-
-<!-- TODO: 添加各脚本的直接安装链接，格式：https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/{filename} -->
-
-或手动安装：复制脚本文件内容到 Tampermonkey 新建脚本中。
-
-## 开发
+## Development
 
 ```bash
-npm install        # 安装依赖
-npm run lint       # ESLint 检查
-npm run format     # Prettier 格式化
-npm run check:metadata  # 校验 userscript 元数据完整性
+npm install             # Install dependencies
+npm run lint            # ESLint check
+npm run format          # Prettier formatting
+npm run format:check    # Prettier dry-run
+npm run check:metadata  # Validate userscript headers
 ```
 
-Pre-commit hook 会在提交时自动运行 ESLint 和 Prettier。
+Pre-commit hooks (husky + lint-staged) auto-run ESLint and Prettier on commit.
+
+## Compatibility
+
+Verified on Chrome 148 + Tampermonkey 5.5.0.
 
 ## License
 

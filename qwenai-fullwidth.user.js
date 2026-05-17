@@ -2,7 +2,7 @@
 // @name         Qwen AI Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
 // @version      1.0
-// @description  移除 Qwen AI 国际版对话页面多余留白，让内容区域填满页面宽度
+// @description  Remove excess whitespace from Qwen AI chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://chat.qwen.ai/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=qwen.ai

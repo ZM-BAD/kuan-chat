@@ -1,7 +1,7 @@
 {
   "name": "kuan-chat",
   "version": "1.0.0",
-  "description": "强制AI对话界面全宽显示 / Force AI chats into full-width mode",
+  "description": "Force AI chat interfaces into full-width mode",
   "private": true,
   "scripts": {
     "lint": "eslint '*.user.js'",
