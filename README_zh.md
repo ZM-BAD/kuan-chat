@@ -13,13 +13,13 @@ AI 对话属于高密度信息区域，默认的左右留白会浪费大量屏�
 
 | 平台 | 脚本文件 | 安装 | 效果 |
 | :---: | :---: | :---: | :---: |
-| ChatGPT | `chatgpt-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js) | ![ChatGPT](demos/chatgpt.mov) |
-| DeepSeek | `deepseek-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js) | ![DeepSeek](demos/deepseek.mov) |
-| Kimi | `kimi-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js) | ![Kimi](demos/kimi.mov) |
-| 千问（国内版） | `qianwen-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js) | ![千问](demos/qianwen.mov) |
-| Qwen AI（国际版） | `qwenai-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js) | ![Qwen AI](demos/qwen.mov) |
-| 豆包 | `doubao-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js) | ![豆包](demos/doubao.mov) |
-| Gemini | `gemini-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/gemini-fullwidth.user.js) | ![Gemini](demos/gemini.mov) |
+| ChatGPT | `chatgpt-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js) | https://github.com/user-attachments/assets/3492a979-0fec-41ab-a997-09de6b422548 |
+| DeepSeek | `deepseek-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js) | https://github.com/user-attachments/assets/9ed6606b-b84e-4756-a791-2e580e4a3545 |
+| Kimi | `kimi-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js) | https://github.com/user-attachments/assets/2410c290-9c77-4f2e-946d-f2e54e17b10b |
+| 千问（国内版） | `qianwen-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js) | https://github.com/user-attachments/assets/d33fc558-fda6-4ece-b832-b2c3bf9d76cf |
+| Qwen AI（国际版） | `qwenai-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js) | https://github.com/user-attachments/assets/b10cef65-19bb-4233-b0a0-0d3b5e00ae13 |
+| 豆包 | `doubao-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js) | https://github.com/user-attachments/assets/6cc9cb4a-425b-468e-a685-6e41497df0c8 |
+| Gemini | `gemini-fullwidth.user.js` | [安装](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/gemini-fullwidth.user.js) | https://github.com/user-attachments/assets/3fb800c4-316f-4c3e-a684-a2e0201f4a6a |
 
 或手动安装：复制脚本文件内容到 Tampermonkey 新建脚本中。
 
