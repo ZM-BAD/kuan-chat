@@ -5,7 +5,7 @@
 // @description  Remove excess whitespace from Doubao chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://www.doubao.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=doubao.com
+// @icon         https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/chat/favicon.png
 // @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js
 // @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js
 // @grant        none

@@ -5,7 +5,7 @@
 // @description  Remove excess whitespace from DeepSeek chat pages with proper margins
 // @author       ZM-BAD
 // @match        https://chat.deepseek.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=deepseek.com
+// @icon         https://fe-static.deepseek.com/chat/favicon.svg
 // @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js
 // @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js
 // @grant        none

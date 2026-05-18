@@ -5,7 +5,7 @@
 // @description  Remove excess whitespace from Qwen AI chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://chat.qwen.ai/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=qwen.ai
+// @icon         https://assets.alicdn.com/g/qwenweb/qwen-chat-fe/0.2.50/favicon.png
 // @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js
 // @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js
 // @grant        none

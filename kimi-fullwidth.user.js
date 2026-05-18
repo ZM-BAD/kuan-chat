@@ -5,7 +5,7 @@
 // @description  Expand Kimi chat content area to full page width
 // @author       ZM-BAD
 // @match        https://www.kimi.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=kimi.com
+// @icon         https://statics.moonshot.cn/kimi-web-seo/favicon.ico
 // @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js
 // @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js
 // @grant        none

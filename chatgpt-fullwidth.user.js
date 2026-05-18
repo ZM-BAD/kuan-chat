@@ -5,7 +5,7 @@
 // @description  Remove excess whitespace from ChatGPT chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://chatgpt.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=chatgpt.com
+// @icon         https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg
 // @updateURL    https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js
 // @downloadURL  https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js
 // @grant        none
