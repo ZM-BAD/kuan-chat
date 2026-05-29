@@ -23,13 +23,13 @@ AI conversations are high-density information areas. The default left/right whit
 
 | Platform | Script | Install |
 | :---: | :---: | :---: |
-| ChatGPT | `chatgpt-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js) |
-| DeepSeek | `deepseek-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js) |
-| Kimi | `kimi-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js) |
-| Qianwen (CN) | `qianwen-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js) |
-| Qwen AI (Global) | `qwenai-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js) |
-| Doubao | `doubao-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js) |
-| Gemini | `gemini-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/gemini-fullwidth.user.js) |
+| ChatGPT<br>`chatgpt.com` | `chatgpt-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/chatgpt-fullwidth.user.js) |
+| DeepSeek<br>`chat.deepseek.com` | `deepseek-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/deepseek-fullwidth.user.js) |
+| Kimi<br>`kimi.com` | `kimi-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/kimi-fullwidth.user.js) |
+| Qianwen (CN)<br>`qianwen.com` | `qianwen-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qianwen-fullwidth.user.js) |
+| Qwen AI (Global)<br>`chat.qwen.ai` | `qwenai-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/qwenai-fullwidth.user.js) |
+| Doubao<br>`doubao.com` | `doubao-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/doubao-fullwidth.user.js) |
+| Gemini<br>`gemini.google.com` | `gemini-fullwidth.user.js` | [Install](https://raw.githubusercontent.com/ZM-BAD/kuan-chat/main/gemini-fullwidth.user.js) |
 
 Or manually: copy the script content into a new Tampermonkey script.
 
