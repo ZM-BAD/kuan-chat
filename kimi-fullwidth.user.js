@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kimi Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
-// @version      1.3
+// @version      1.4
 // @description  Expand Kimi chat content area to full page width
 // @author       ZM-BAD
 // @match        https://www.kimi.com/*
@@ -16,13 +16,11 @@
   'use strict';
 
   function injectStyles() {
-    // Check if styles already injected
     if (document.getElementById('kimi-full-width-styles')) {
       console.log('Kimi Full Width: styles already exist');
       return;
     }
 
-    // Check if head exists
     if (!document.head) {
       console.log('Kimi Full Width: head not ready, retrying...');
       setTimeout(injectStyles, 100);
@@ -51,6 +49,23 @@
             .chat-input {
                 max-width: 100% !important;
                 width: 100% !important;
+                /* Kimi applies box-sizing: content-box with 16px horizontal padding
+                   here, so width:100% only fills the content box and the padding
+                   overflows (~32px), letting text spill past the right border.
+                   border-box includes the padding within the width. */
+                box-sizing: border-box !important;
+            }
+
+            /* Positioning anchor for the "scroll to bottom" button (.to-bottom). It
+               defaults to the same 800px centered column as .chat-content-list, so
+               once the message list is widened the button floats off the right
+               edge. Stretching this anchor to full width makes the button's
+               right:0 re-align with the content's right edge. */
+            .bottom-action-container {
+                left: 0 !important;
+                right: 0 !important;
+                width: auto !important;
+                max-width: 100% !important;
             }
         `;
     document.head.appendChild(style);
