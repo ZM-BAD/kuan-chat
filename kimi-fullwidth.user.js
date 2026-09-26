@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kimi Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
-// @version      1.4
+// @version      1.5
 // @description  Expand Kimi chat content area to full page width
 // @author       ZM-BAD
 // @match        https://www.kimi.com/*
@@ -54,6 +54,29 @@
                    overflows (~32px), letting text spill past the right border.
                    border-box includes the padding within the width. */
                 box-sizing: border-box !important;
+            }
+
+            /* The input's width cap is NOT on .chat-editor (which is already
+               width:100%) but on its parent .chat-editor-wrap:
+                   .chat-editor-wrap { max-width: var(--chat-input-max-width, 768px) }
+               Styling .chat-editor therefore cannot widen anything - the parent
+               still clamps it to 768px. Override the cap where it actually
+               lives, exactly like .chat-content-list above. Width only. */
+            .chat-editor-wrap {
+                max-width: 100% !important;
+            }
+
+            /* Other parts of the input cluster are NOT children of
+               .chat-editor-wrap, so the rule above leaves them behind at 768px.
+               Kimi sizes them from this one variable instead:
+                   .home-input-options  { max-width: calc(var(--chat-input-max-width) - 40px); margin-top: -36px }
+                   .publisher-shortcut  { max-width: calc(var(--chat-input-max-width) - 40px) }
+               They are visually joined to the input (the options bar tucks under
+               its bottom edge), so widening the input without them tears the
+               cluster apart. Override the variable where Kimi defines it - on
+               the home layout only, which chat pages don't have. */
+            .home-page-layout {
+                --chat-input-max-width: 100% !important;
             }
 
             /* Positioning anchor for the "scroll to bottom" button (.to-bottom). It
