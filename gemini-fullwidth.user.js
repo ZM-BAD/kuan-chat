@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gemini Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
-// @version      1.1
+// @version      1.2
 // @description  Remove excess whitespace from Gemini chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://gemini.google.com/*
@@ -17,96 +17,101 @@
 
   const PADDING = '24px';
 
-  function inject() {
+  function injectStyles() {
     if (document.getElementById('gemini-fullwidth-style')) return;
+
+    if (!document.head) {
+      setTimeout(injectStyles, 100);
+      return;
+    }
 
     const style = document.createElement('style');
     style.id = 'gemini-fullwidth-style';
     style.textContent = `
-      .input-area-container {
+      /* Expand the conversation column. Gemini's current layout already lets
+         .conversation-container grow, but this keeps older layouts working. */
+      .conversation-container {
         max-width: 100% !important;
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-        padding-left: ${PADDING} !important;
-        padding-right: ${PADDING} !important;
-        box-sizing: border-box !important;
-      }
-      .assistant-messages-primary-container {
         width: 100% !important;
         padding-left: ${PADDING} !important;
         padding-right: ${PADDING} !important;
         box-sizing: border-box !important;
       }
-      .zero-state-block-container {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+
+      /* This is the rule that actually keeps answers narrow. Every direct
+         child of the answer markdown (paragraphs, headings, lists, tables...)
+         is capped and centered with:
+           .enable-extended-and-xl-grid & > :not(#_) {
+             max-width: 708px; margin-inline: auto;
+           }
+         Widening .conversation-container alone does nothing because the cap
+         lives one level lower, on the markdown blocks themselves. */
+      .markdown > * {
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
-      .conversation-container {
+
+      /* Assistant header, footer and action rows use the same 708px centered
+         cap as the markdown blocks. */
+      .response-container-header,
+      .response-container-footer,
+      .response-footer,
+      thinking-overlay,
+      message-actions,
+      model-response-disclaimers {
+        max-width: none !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* User message row: keep the bubble itself right-aligned, but let the
+         row span the full content width. */
+      user-query {
         max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Tables are centered a second time with padding-inline on .table-content
+         and .table-footer - remove that inset so the table can use the width. */
+      .table-block .table-content,
+      .table-block .table-footer {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      /* Input box */
+      .input-area-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         padding-left: ${PADDING} !important;
         padding-right: ${PADDING} !important;
         box-sizing: border-box !important;
       }
-      user-query {
+
+      /* New-chat / zero state */
+      .zero-state-container {
         max-width: 100% !important;
-        box-sizing: border-box !important;
-      }
-      hallucination-disclaimer {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
       }
     `;
     document.head.appendChild(style);
   }
 
-  function forceLayout() {
-    document.querySelectorAll('.input-area-container').forEach(function (el) {
-      el.style.setProperty('max-width', '100%', 'important');
-      el.style.setProperty('margin-left', '0px', 'important');
-      el.style.setProperty('margin-right', '0px', 'important');
-      el.style.setProperty('padding-left', PADDING, 'important');
-      el.style.setProperty('padding-right', PADDING, 'important');
-      el.style.setProperty('box-sizing', 'border-box', 'important');
-    });
-    document
-      .querySelectorAll('.assistant-messages-primary-container')
-      .forEach(function (el) {
-        el.style.setProperty('width', '100%', 'important');
-        el.style.setProperty('padding-left', PADDING, 'important');
-        el.style.setProperty('padding-right', PADDING, 'important');
-        el.style.setProperty('box-sizing', 'border-box', 'important');
-      });
-    document
-      .querySelectorAll('.zero-state-block-container')
-      .forEach(function (el) {
-        el.style.setProperty('max-width', '100%', 'important');
-        el.style.setProperty('box-sizing', 'border-box', 'important');
-      });
-    document.querySelectorAll('.conversation-container').forEach(function (el) {
-      el.style.setProperty('max-width', '100%', 'important');
-      el.style.setProperty('padding-left', PADDING, 'important');
-      el.style.setProperty('padding-right', PADDING, 'important');
-      el.style.setProperty('box-sizing', 'border-box', 'important');
-    });
-    document.querySelectorAll('user-query').forEach(function (el) {
-      el.style.setProperty('max-width', '100%', 'important');
-      el.style.setProperty('box-sizing', 'border-box', 'important');
-    });
-    document
-      .querySelectorAll('hallucination-disclaimer')
-      .forEach(function (el) {
-        el.style.setProperty('max-width', '100%', 'important');
-        el.style.setProperty('box-sizing', 'border-box', 'important');
-      });
-  }
+  injectStyles();
 
-  inject();
-  forceLayout();
-
-  new MutationObserver(function () {
-    inject();
-    forceLayout();
-  }).observe(document.body, { childList: true, subtree: true });
-
-  console.log('[Gemini Full Width] v1.1 loaded');
+  // Gemini is an SPA and may render the stylesheet host late; retry a few
+  // times like the other scripts in this repo.
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(injectStyles, 100);
+  });
+  window.addEventListener('load', function () {
+    setTimeout(injectStyles, 500);
+  });
+  setTimeout(injectStyles, 1000);
+  setTimeout(injectStyles, 2000);
 })();
