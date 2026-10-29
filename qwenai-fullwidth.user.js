@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Qwen AI Chat Full Width
 // @namespace    https://github.com/ZM-BAD/kuan-chat
-// @version      1.0
+// @version      1.1
 // @description  Remove excess whitespace from Qwen AI chat pages and expand content to full width
 // @author       ZM-BAD
 // @match        https://chat.qwen.ai/*
@@ -37,6 +37,18 @@
         margin-right: 0px !important;
         box-sizing: border-box !important;
       }
+      /* The input's width cap is NOT on .message-input-wrapper (which sits at
+         760px) but on its parent .agent-mode-feedback-gate, which is centered
+         with max-width: 800px. Widening the wrapper alone only reaches 800px,
+         so the input stays narrow while the messages go full width. Override
+         the cap where it actually lives. */
+      .agent-mode-feedback-gate {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        box-sizing: border-box !important;
+      }
     `;
     document.head.appendChild(style);
   }
@@ -56,6 +68,15 @@
       el.style.setProperty('margin-right', '0px', 'important');
       el.style.setProperty('box-sizing', 'border-box', 'important');
     });
+    document
+      .querySelectorAll('.agent-mode-feedback-gate')
+      .forEach(function (el) {
+        el.style.setProperty('max-width', '100%', 'important');
+        el.style.setProperty('width', '100%', 'important');
+        el.style.setProperty('margin-left', '0px', 'important');
+        el.style.setProperty('margin-right', '0px', 'important');
+        el.style.setProperty('box-sizing', 'border-box', 'important');
+      });
   }
 
   inject();
